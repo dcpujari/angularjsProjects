@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Employee Details</title>
+		<% include ../header/header_lib.ejs %>
+		<script type="text/javascript" src="javascripts/customDirectiveIndex.js"></script>
+	</head>
+	<body ng-app="customDirectiveModule">
+	<div ng-controller="emp">
+		<form class="form-inline">
+			<div class="form-group">
+			<!--	<label>Enter Emp Number</label>
+ 				<input type="text" class="form-control" ng-model="searchEmpno"/>	
+ -->		</div>
+			<button class="btn btn-primary" ng-click="display()">Display All Employee</button>
+		</form>
+		<hr>
+
+		<div ng-repeat="oemp in employees" class="col-md-4">
+			<div emp-details ></div>
+		</div>
+	</div>
+	</body>
+</html>

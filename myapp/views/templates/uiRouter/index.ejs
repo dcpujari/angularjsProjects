@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+	<title>Angular Ui Router</title>
+
+	<% include ../header/header_lib.ejs %>
+	<script type="text/javascript" src="javascripts/uiRouterIndex.js"></script>
+
+</head>
+<body ng-app="myApp">
+
+	<div class="firstControllerDiv" ng-controller="myController">
+		Enter  vtext: 
+		<input type="text" name="textName" ng-model="textValue">
+		<h1>Hello : {{textValue}}</h1>
+	</div>
+
+	<a ui-sref="home()" ui-sref-active="active">Home</a>
+	<br>
+	<a ui-sref="myFirst()" ui-sref-active="active">NewHome</a>
+	
+    <div ui-view> </div>
+    
+</body>
+</html>

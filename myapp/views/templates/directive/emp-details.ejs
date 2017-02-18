@@ -1,0 +1,20 @@
+<!-- <div class="panel panel-primary"> -->
+<div ng-class='(oemp.name=="RAM") ? "panel panel-danger" : "panel panel-primary"'>
+	<div class="panel-heading">
+		<h4>{{oemp.name}}</h4>
+	</div>	
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-sm4"><strong> Emp id: </strong></div>
+			<div class="col-sm3">{{oemp._id}}</div>
+		</div>
+		<div class="row">
+			<div class="col-sm4"><strong> Emp Name: </strong></div>
+			<div class="col-sm3">{{oemp.name}}</div>
+		</div>
+		<div class="row">
+			<div class="col-sm4"><strong> Emp City: </strong></div>
+			<div class="col-sm3">{{oemp.city}}</div>
+		</div>
+	</div>
+</div>

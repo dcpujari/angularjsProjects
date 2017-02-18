@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<!-- <script src="angular.min.js"></script> -->
+<script src="angular.js"></script>
+<script src="customerController.js"></script>
+
+</head>
+	<body ng-app="myApp">
+		<div id="custScreen" ng-controller="myController">
+			Search <input type="text" placeholder="Search Employees" ng-model="searchText.name" /><br /><br />
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Gender</th>
+						<th>Salary</th>
+						<th>City</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="emp in employees | filter:searchText">
+						<td>{{emp.name}}</td>
+						<td>{{emp.gender}}</td>
+						<td>{{emp.salary}}</td>
+						<td>{{emp.city}}</td>
+						<td><button ng-click="editEmployee(emp)">Edit</button></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+	</body>
+</html>
